@@ -1,0 +1,17 @@
+
+The 2 attached pictures in the /Doc are related to the question 6: price_analysis.csv (bonus) including:
+• top 10 dyraste produkter
+• top 10 produkter med mest avvikande pris 
+
+At first, I wrote a code (see the pictures under Doc) and the issue was that both top_10_expensive and top_10_outliers 
+gave the same result, the highest prices ignoring the lowest prices.  
+
+Codes:
+top_10_expensive = pd.DataFrame(accepted_df).sort_values(by=["price"], ascending=False).head(10).copy()
+
+outliers_df = accepted_df.copy()
+median_price = outliers_df["price"].median()
+outliers_df["deviation"] = (outliers_df["price"] - median_price).abs()
+top_10_outliers_df = outliers_df.sort_values(by="deviation", ascending=False).head(10)
+
+
