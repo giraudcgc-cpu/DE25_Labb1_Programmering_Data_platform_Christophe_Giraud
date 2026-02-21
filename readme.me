@@ -1,5 +1,69 @@
-# Laboration 1 – Data Platform Development
-“Data Ingestion, manipulation & workflow”
+# DE25 Lab 1 – Programming in Data Platform Development “Data Ingestion, manipulation & workflow”
+
+**Student:** Christophe Giraud  
+**Course:** Data Platform Development  
+**Lessons covered:** #6 (ETL & Pipeline Theory), #7 (Pandas & Batch Files), #8 (Stories, Planning & Transform Workshop)  
+**Date:** February 2026
+
+
+## Overview
+
+This lab is about processing product data using **Pandas** in a simple **ETL** process (Extract → Transform → Load):
+
+- Extract: Read product data from "lab1_data.csv" (original name was products.csv)
+- Transform: Clean the data, fix types, handle missing values, flag problems (missing currency, price = 0, negative/extreme prices), reject impossible rows
+- Load: Save summary statistics and analysis files as CSV
+
+No database (PostgreSQL/Psycopg3) or API (FastAPI) is used here — this lab is file-based only
+
+
+## Repository Files
+
+- "lab1_data.csv"                   – Raw input file (products with name, price, currency, etc.)
+- "labbet.ipynb"                    – Main Jupyter Notebook: full lab code (reading, cleaning, flagging, rejecting, analytics)
+- "teori_theory.ipynb"              – Theory notes from lessons
+- "analytics_summary.csv"           – Final summary: average price, median price, total products, products with missing price
+- "price_analysis_version1.csv"     – First version of bonus price analysis (top 10 expensive + outliers)
+- "price_analysis_version2.csv"     – Second version with a different way to do it (trick)
+- "rejected_products.csv"           – All rejected/impossible products
+- "Doc/"                            – Folder with screenshots of my first attempt to get the top_10_expensive and top_10_outliers. 
+- "sources.md"                      – List of sources
+
+
+## How to run it
+
+1. **Clone the repository** 
+   ```bash
+   git clone https://github.com/giraudcgc-cpu/DE25_Labb1_Programmering_Data_platform_Christophe_Giraud.git
+   cd DE25_Labb1_Programmering_Data_platform_Christophe_Giraud
+
+OR 
+2. Create and activate a virtual environment with: 
+python -m venv .venv
+.venv\Scripts\activate
+
+3. Install dependencies (only pandas is needed). From bash or the Terminal: pip install pandas
+
+4. Finaly, Open labbet.ipynb in VS Code (with Jupyter extension) and run all cells from top to bottom
+
+
+--- What I Learned ---
+
+- To Build a basic ETL pipeline using only Pandas
+- The importance of cleaning and rejecting bad data before analysis
+- How to detect outliers (sort by price vs. deviation from median)
+- To export results (DataFrames) to CSV files
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11,7 +75,7 @@ Question 6: Create a file price_analysis.csv (bonus) including:
 • top 10 dyraste produkter
 • top 10 produkter med mest avvikande pris 
 
-At first, I wrote the code below. The issue was that both top_10_expensive and top_10_outliers 
+At first, I wrote a code (see under Doc) and the issue was that both top_10_expensive and top_10_outliers 
 gave the result, the highest prices ignoring the lowest prices.  
 
 Codes:
@@ -25,7 +89,7 @@ top_10_outliers_df = outliers_df.sort_values(by="deviation", ascending=False).he
 
 See both pictures under Doc
 
-1
+
 
 
 

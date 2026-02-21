@@ -1,0 +1,22 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter/IPython notebooks checkpoints
+.ipynb_checkpoints/
+
+# Local VS Code settings (optional but common)
+.vscode/
+
+# Other common ignores (add if needed)
+*.log
+*.tmp
