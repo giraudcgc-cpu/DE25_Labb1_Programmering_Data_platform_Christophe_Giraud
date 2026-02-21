@@ -1,0 +1,31 @@
+id,name,price,currency,created_at,is_flagged,category,deviation
+SKU-1039,coat,999999.0,SEK,2024-10-15,True,top_10_expensive,
+SKU-1021,ring,25000.0,SEK,2024-06-05,True,top_10_expensive,
+SKU-1020,watch,15000.0,SEK,2024-06-01,True,top_10_expensive,
+SKU-1032,suit,5000.0,SEK,2024-09-01,False,top_10_expensive,
+SKU-1040,parka,4500.0,SEK,2024-11-01,False,top_10_expensive,
+SKU-1027,winter jacket,3500.0,SEK,2024-07-15,False,top_10_expensive,
+SKU-1016,coat,2500.0,SEK,2024-05-01,False,top_10_expensive,
+SKU-1034,blazer,2200.0,SEK,2024-09-10,False,top_10_expensive,
+SKU-1010,boots,1500.0,SEK,2024-02-15,False,top_10_expensive,
+SKU-1047,heels,1500.0,SEK,2024-12-15,False,top_10_expensive,
+SKU-1039,coat,999999.0,SEK,2024-10-15,True,outliers_including_flagged,999399.0
+SKU-1021,ring,25000.0,SEK,2024-06-05,True,outliers_including_flagged,24400.0
+SKU-1020,watch,15000.0,SEK,2024-06-01,True,outliers_including_flagged,14400.0
+SKU-1032,suit,5000.0,SEK,2024-09-01,False,outliers_including_flagged,4400.0
+SKU-1040,parka,4500.0,SEK,2024-11-01,False,outliers_including_flagged,3900.0
+SKU-1027,winter jacket,3500.0,SEK,2024-07-15,False,outliers_including_flagged,2900.0
+SKU-1016,coat,2500.0,SEK,2024-05-01,False,outliers_including_flagged,1900.0
+SKU-1034,blazer,2200.0,SEK,2024-09-10,False,outliers_including_flagged,1600.0
+SKU-1010,boots,1500.0,SEK,2024-02-15,False,outliers_including_flagged,900.0
+SKU-1047,heels,1500.0,SEK,2024-12-15,False,outliers_including_flagged,900.0
+SKU-1032,suit,5000.0,SEK,2024-09-01,False,outliers_excluding_flagged,4400.0
+SKU-1040,parka,4500.0,SEK,2024-11-01,False,outliers_excluding_flagged,3900.0
+SKU-1027,winter jacket,3500.0,SEK,2024-07-15,False,outliers_excluding_flagged,2900.0
+SKU-1016,coat,2500.0,SEK,2024-05-01,False,outliers_excluding_flagged,1900.0
+SKU-1034,blazer,2200.0,SEK,2024-09-10,False,outliers_excluding_flagged,1600.0
+SKU-1010,boots,1500.0,SEK,2024-02-15,False,outliers_excluding_flagged,900.0
+SKU-1047,heels,1500.0,SEK,2024-12-15,False,outliers_excluding_flagged,900.0
+SKU-1014,t-shirt,0.0,SEK,2024-04-10,False,outliers_excluding_flagged,600.0
+SKU-1037,tracksuit,1200.0,SEK,2024-10-05,False,outliers_excluding_flagged,600.0
+SKU-1018,sneakers,1200.0,SEK,2024-05-10,False,outliers_excluding_flagged,600.0
